@@ -1,5 +1,6 @@
 import requests
 import json
+from config import url_base
 
 # Cargar datos desde archivo
 with open('datos.json', 'r') as f:
@@ -14,7 +15,7 @@ for d in data['docs']:
 
 base_datos = "personas003"
 # Configurar el acceso a la base de datos
-url = f"http://127.0.0.1:5984/{base_datos}/_bulk_docs"
+url = f"{url_base}/{base_datos}/_bulk_docs"
 headers = {'Content-Type': 'application/json'}
 
 # Enviar datos

@@ -14,7 +14,7 @@ for d in data['docs']:
 
 base_datos = "personas004"
 # Configurar el acceso a la base de datos
-url = f"http://127.0.0.1:5984/{base_datos}"
+url = f"http://127.0.0.1:5985/{base_datos}"
 headers = {'Content-Type': 'application/json'}
 
 # Enviar datos
@@ -25,3 +25,7 @@ for doc in lista_datos:
         json=doc
     )
     print(f"Insertando {doc['nombre']} | {response.status_code}")
+
+
+"El jemplo03 toma todos los datos que cumplen la condicion y los envia todos juntos a la base de datos"
+"El ejemplo04 envia dato por dato haciendo que el proceso sea un poco mas lento"
